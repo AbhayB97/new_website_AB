@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abhay Bhingradia – 3D Disassembly Tour</title>
-  <meta name="description" content="Interactive scroll‑driven 3D disassembly tour of a laptop, showcasing my portfolio." />
+  <meta name="description" content="Interactive 3D disassembly tour of a laptop showcasing Abhay Bhingradia's portfolio." />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-
-  <!-- Optional site header/nav -->
+  <!-- Site Header -->
   <header id="site-header">
     <h1>Abhay Bhingradia</h1>
     <nav>
@@ -19,33 +18,35 @@
     </nav>
   </header>
 
-  <!-- Full‑screen Canvas -->
+  <!-- 3D Canvas Container -->
   <div id="canvas-container">
-    <canvas id="scene" aria-label="3D interactive disassembly tour"></canvas>
+    <canvas id="scene" aria-label="3D interactive disassembly scene"></canvas>
   </div>
 
-  <!-- Scroll sections that trigger disassembly steps -->
+  <!-- Scroll‐driven Content Sections -->
   <main>
     <section id="about" class="scroll-step">
       <h2>About Me</h2>
-      <p>…your bio here…</p>
+      <p><!-- Your bio here --></p>
     </section>
 
     <section id="projects" class="scroll-step">
       <h2>Key Projects</h2>
-      <p>…highlight your work…</p>
+      <p><!-- Highlight your work --></p>
     </section>
 
     <section id="contact" class="scroll-step">
       <h2>Contact</h2>
-      <p>…your email, socials…</p>
+      <p><!-- Your email and social links --></p>
     </section>
   </main>
 
+  <!-- Site Footer -->
   <footer>
-    <small>© 2025 Abhay Bhingradia</small>
+    <small>© 2025 Abhay Bhingradia</small>
   </footer>
 
+  <!-- Main 3D script -->
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
