@@ -2,6 +2,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import anime from 'animejs/lib/anime.es.js';
+import { TerminalUI } from './modules/TerminalUI.js';
 
 // Scene Setup
 const canvas = document.getElementById('scene');
@@ -18,6 +19,11 @@ scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
 directionalLight.position.set(5, 10, 7);
 scene.add(directionalLight);
+
+// Initialize terminal UI
+const terminalUI = new TerminalUI();
+terminalUI.init().catch(console.error);
+window.portfolioApp = { terminalUI };
 
 // Load 3D Model
 let disassemblyTimeline;
