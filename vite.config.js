@@ -1,26 +1,16 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // Base public path
   base: './',
-  
-  // Development server configuration
-  server: {
-    host: true,
-    port: 3000,
-    open: true
-  },
-  
-  // Build configuration
+  server: { host: true, port: 3000, open: true },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-    minify: 'terser',
+    // minify: 'esbuild' // default; you can omit this line entirely
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
+      input: { main: './index.html' },
       output: {
         manualChunks: {
           three: ['three'],
@@ -29,21 +19,8 @@ export default defineConfig({
       }
     }
   },
-  
-  // Asset handling
   assetsInclude: ['**/*.glb', '**/*.gltf'],
-  
-  // Optimization
-  optimizeDeps: {
-    include: ['three', 'animejs'],
-    exclude: []
-  },
-  
-  // Plugin configuration
+  optimizeDeps: { include: ['three', 'animejs'], exclude: [] },
   plugins: [],
-  
-  // CSS configuration
-  css: {
-    devSourcemap: true
-  }
+  css: { devSourcemap: true }
 })
