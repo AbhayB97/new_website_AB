@@ -21,9 +21,12 @@ directionalLight.position.set(5, 10, 7);
 scene.add(directionalLight);
 
 // Initialize terminal UI
-const terminalUI = new TerminalUI();
-terminalUI.init().catch(console.error);
-window.portfolioApp = { terminalUI };
+let terminalUI = null;
+if (document.getElementById('terminal-overlay')) {
+  terminalUI = new TerminalUI();
+  terminalUI.init().catch(console.error);
+  window.portfolioApp = { terminalUI };
+}
 
 // Load 3D Model
 let disassemblyTimeline;
