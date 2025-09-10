@@ -62,6 +62,7 @@ function buildDisassemblyTimeline(parts) {
 
   // Hook scroll to timeline
   window.addEventListener('scroll', syncTimelineWithScroll);
+  syncTimelineWithScroll();
 }
 
 // Sync Timeline Seek to Scroll Position
@@ -71,6 +72,11 @@ function syncTimelineWithScroll() {
   const maxScroll = document.body.scrollHeight - window.innerHeight;
   const progress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
   disassemblyTimeline.seek(disassemblyTimeline.duration * progress);
+
+  const progressFill = document.getElementById('progress-fill');
+  if (progressFill) {
+    progressFill.style.width = `${progress * 100}%`;
+  }
 }
 
 // Render Loop
