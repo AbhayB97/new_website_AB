@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhay Bhingradia – Computer Friendly Page</title>
+  <meta name="description" content="Interactive 3D disassembly tour of a laptop showcasing Abhay Bhingradia's portfolio." />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Site Header -->
+  <header id="site-header">
+    <h1>Abhay Bhingradia</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container">
+    <canvas id="scene" aria-label="3D interactive disassembly scene"></canvas>
+  </div>
+
+  <!-- Scroll‐driven Content Sections -->
+  <main>
+    <section id="about" class="scroll-step">
+      <h2>About Me</h2>
+      <p><!-- Your bio here --></p>
+    </section>
+
+    <section id="projects" class="scroll-step">
+      <h2>Key Projects</h2>
+      <p><!-- Highlight your work --></p>
+    </section>
+
+    <section id="contact" class="scroll-step">
+      <h2>Contact</h2>
+      <p><!-- Your email and social links --></p>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer>
+    <small>© 2025 Abhay Bhingradia</small>
+  </footer>
+
+  <!-- Terminal Overlay -->
+  <div id="terminal-overlay">
+    <div id="terminal-output" aria-live="polite"></div>
+    <div id="terminal-input-line">
+      <span id="terminal-prompt">visitor@portfolio:~$</span>
+      <div class="input-wrapper">
+        <input id="terminal-input" type="text" autocomplete="off" aria-label="Terminal input" />
+        <span id="terminal-cursor"></span>
+      </div>
+    </div>
+    <div class="terminal-hint">Type "help" to begin your journey</div>
+  </div>
+
+  <!-- Main 3D script -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
